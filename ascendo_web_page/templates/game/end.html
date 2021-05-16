@@ -1,0 +1,79 @@
+{%load static%}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Treasure Hunt</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="one" class="fade-in">
+        {%if request.user.is_authenticated%}
+        <div class="signout" >
+          <img class="avatar" onclick="show_side_bar(this)" src="{{ request.user.socialaccount_set.all.0.get_avatar_url }}" alt="Not Found" onerror=this.src="{%static 'images/L.jpeg'%}">
+        
+          
+        </div>
+        <div id="sidebar" class="sidebar">
+          <a>{{request.user.profile.nick_name | title}}</a>
+          <a href="{%url 'user_profile:redirect'%}">Rules</a>
+          <a class="logout_button" href="{% url 'user_profile:logout'%}">Logout</a>
+          
+        </div>
+        {%endif%}
+				<ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+
+				<!-- Intro -->
+					<div id="intro">
+                        
+						<h1 style="color: rgb(255, 166, 0);">Thats it!</h1>
+                        <p>You have completed the ACM-Surprize Coding</p>
+                        <a href="{%url 'user_profile:lead'%}" class="btn1 icon solid  fas fa-play scrolly">Leader board</a>
+						<script>
+							document.body.style.background = "url('{%static 'images/end.jpg'%}')";
+							console.log("HEHE");
+						</script>
+					
+
+						
+							
+                        
+                        
+                    
+				
+
+	
+
+
+
+
+
+			</div>
+
+		<!-- Scripts -->
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'assets/js/browser.min.js' %}"></script>
+		<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'assets/js/util.js' %}"></script>
+		<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
