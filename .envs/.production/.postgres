@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=ascendo_web_page
+POSTGRES_USER=KZRSNioPfVoJEFSZMqorndvbwavdiVDO
+POSTGRES_PASSWORD=Js0XINvDsDvJ2u2eBF5N4bUCjUY0v3vBuzJkbuw7Hci8OWntii5RHFI0DpXSwlat
